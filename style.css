@@ -84,8 +84,17 @@ header button span {
     border-bottom: 0.5rem solid var(--green);
     position: absolute;
     top: 76px;
-    right: 0;
+    right: -500px; /* 0; */
     padding: 1rem;
+    /* display: none */
+    opacity: 0;
+    transition: ease-in-out .5s;
+}
+
+#cart.show {
+    opacity: 1;
+    right: 0;
+    /* display: block */
 }
 
 #cart h2 {
@@ -112,7 +121,6 @@ header button span {
     border-radius: 50%;
     min-width: 1rem;
     cursor: pointer;
-    padding: 0;
 }
 
 #cart ul li span {
@@ -125,7 +133,7 @@ header button span {
 }
 
 .price {
-    width: 4.5rem;
+    width: 4rem;
     text-align: right;
 }
 
@@ -148,7 +156,7 @@ nav ul {
     padding: 0; /* Fjerner default padding som er i nettleser(e) */
     list-style-type: none;
     display: flex;
-
+    gap: 1rem;
 }
 
 nav a {
